@@ -6,7 +6,7 @@ Django webapp for collecting, storing and showing hotels and cities
 ![image](https://github.com/user-attachments/assets/e8a639ee-869a-4ca0-88b6-06df00a36605)
 
 ### Run the project
-This Django webapp can be run locally by navigating to the app-folder `HotelApp` and then running the command `python manage.py runserver` in the terminal.
+This webapp can be run locally by navigating to the Django project-folder `MaykinMedia` (NOT the root-folder and NOT the app-folder) and then running the command `python manage.py runserver` in the terminal.
 
 ### Project description
 This Hotel app is a builded proof-of-concept for the case "Integrating third parties". It is a webapp written in Django where the user can view hotels and also filter on hotels by a specific city.
