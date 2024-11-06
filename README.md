@@ -14,6 +14,7 @@ This Hotel app is a builded proof-of-concept for the case "Integrating third par
 #### Data
 The data is retrieved from an authenticated HTTP server where two CSV-files are located. One of the files contains cities (PK and name) and the other contains hotels (PK, FK to city and name). See the simple datamodel below:
 ![image](https://github.com/user-attachments/assets/4233186f-0567-4fc3-b61a-f063308856fb)
+
 In this Django project, these tables are represented as models and the data is stored in a MySQL database.
 
 #### View and templates
