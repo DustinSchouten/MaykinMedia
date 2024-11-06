@@ -22,7 +22,7 @@ The Django project contains one class-based view named 'Index' with a get() and 
 
 There are three HTML-templates used in this project:
 ##### base.html
-This file contains basic HTML-content like th <header> and the <body> with a <h1> tag but without the actual content. This is done so that new pages can easily be added by reusing this template.
+This file contains basic HTML-content like the `<header>` tag and the `<body>` tag with a `<h1>` tag but without the actual content. This is done so that new pages can easily be added by reusing this template.
 ##### index.html
 This file contains all HTML-content for showing the city input filter and the results section.
 ##### error.html
