@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <link rel="stylesheet" type="text/css" href="{% static 'HotelApp/css/style.css' %}">
+    <title>Hotel App</title>
+  </head>
+  <body>
+    <h1>Hotel App</h1>
+    <img class="hotel_header_icon" src="{% static 'HotelApp/img/hotel_header_icon.png' %}">
+    <img class="hotel_header_icon hotel_header_icon_right" src="{% static 'HotelApp/img/hotel_header_icon.png' %}">
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'HotelApp/js/javascript.js' %}"></script>
+  </body>
+</html>

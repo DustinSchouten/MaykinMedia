@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: ui-sans-serif,system-ui;
+}
+
+:root {
+    --darkblue: #003B95;
+    --lightblue: #eaf2ff;
+    --lightblue_shadow: #cbdfff;
+    --yellow: #ffcf35;
+}
+
+body {
+    background-color: var(--darkblue);
+    max-width: 800px;
+    margin: auto;
+    width: calc(100% - 40px);
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 40px;
+    color: white;
+    font-size: 2.25em;
+}
+
+.hotel_header_icon {
+    width: 60px;
+    position: absolute;
+    top: 0;
+}
+
+.hotel_header_icon_right {
+    right: 0;
+}
+
+.container {
+    background-color: var(--lightblue);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--lightblue_shadow);
+    margin-bottom: 20px;
+}
+
+/* City search form styles */
+form div {
+    display: flex;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    display: block;
+    font-weight: bold;
+}
+
+input[type=text] {
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid var(--darkblue);
+    padding: 10px;
+    margin-right: 20px;
+    box-shadow: 0 0 0px 1000px white inset;
+}
+
+input[type=submit] {
+    background-color: var(--yellow);
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: var(--darkblue);
+    border-radius: 5px;
+    border: 1px solid var(--darkblue);
+}
+
+ul.hotels_list {
+    display: grid;
+    gap: 20px;
+    list-style: none;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 600px) {
+    ul.hotels_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Hotel results styles */
+.hotels_count_message {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+ul.hotels_list li {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--lightblue_shadow);
+    text-align: center;
+    font-style: italic;
+}
+
+ul.hotels_list li .hotel_icon {
+    width: 30px;
+    margin: 0 auto 10px;
+    filter: opacity(0.6);
+    display: block;
+}
+
+ul.hotels_list li .hotel_name {
+    font-weight: bold;
+    word-break: break-word;
+}
+
+ul.hotels_list li .hotel_city {
+    color: grey;
+}
+
+.no_hotels_found_message {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.error_message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #d00;
+}

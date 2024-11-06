@@ -1,0 +1,39 @@
+{% extends "HotelApp/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- City input container -->
+<section class="container">
+    <form method="post">
+        {% csrf_token %}
+        <label for="city">Filter city:</label>
+        <div>
+            <input type="text" id="city" name="city" list="city_options" placeholder="Enter a city...">
+            <datalist id="city_options">
+                {% for city in city_names %}
+                    <option>{{city}}</option>
+                {% endfor %}
+            </datalist>
+            <input type="submit" id="submit_button" value="Search" />
+        </div>
+    </form>
+</section>
+
+<!-- Hotel results container -->
+<section class="container">
+    {% if model_objects.count > 0 %}
+    <p class="hotels_count_message">Number of results: <b>{{ model_objects.count }}</b></p>
+        <ul class="hotels_list">
+            {% for model_object in model_objects %}
+                <li>
+                    <img class="hotel_icon" src="{% static 'HotelApp/img/hotel_icon.png' %}">
+                    <p class="hotel_name">{{ model_object.name }}</p>
+                    <p class="hotel_city">{{ model_object.city.name }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no_hotels_found_message">No hotels found</p>
+    {% endif %}
+</section>
+{% endblock %}
