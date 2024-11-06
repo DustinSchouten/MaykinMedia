@@ -13,6 +13,9 @@ class Index(View):
         :return: The index page or an error page
         """
 
+        # Truncate the database model before collecting the new data from the API
+        City.objects.all().delete()
+
         # Fetch the data from the specific city and hotel api and write it to the database
         model_names = ['City', 'Hotel']
         for model_name in model_names:
