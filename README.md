@@ -25,7 +25,7 @@ The data is retrieved from an authenticated HTTP server where two CSV-files are 
 In this Django project, these tables are represented as models and the data is stored in a MySQL database.
 
 ### Custom management command
-In the app-folder in management/commands, a custom made command named `load_csv_data_into_db` is created for collecting the data and writing it into the database. This command can be called by running `python manage.py load_csv_data_into_db`.
+In the app-folder in management/commands, a custom management command named `load_csv_data_into_db` is created for collecting the data and writing it into the database. This command can be called by running `python manage.py load_csv_data_into_db`.
 
 ### View and templates
 The Django project contains one class-based view named `"Index"` with a `get()` and a `post()` method. The `get()` method is called when the user visits the page and the `post()` method is called when the user clicks on the Search-button. 
