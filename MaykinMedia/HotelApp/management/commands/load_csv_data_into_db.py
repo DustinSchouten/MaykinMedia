@@ -15,6 +15,8 @@ class Command(BaseCommand):
         for model_name in model_names:
             handler = DataHandler('HotelApp', model_name)
             handler.fetch_data()
+            if handler.get_status_code() == 404:
+                self.stderr.write('The hotel data could not be retrieved.')
             handler.parse_data()
             handler.write_to_db()
         self.stdout.write('Done!')
