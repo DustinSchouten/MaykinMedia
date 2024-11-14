@@ -37,11 +37,4 @@ This file contains basic HTML-content like the `<header>` tag and the `<body>` t
 This file contains all HTML-content for showing the city input filter and the results section.
 
 ### Tests
-In this project, three unit tests are added in `tests.py`. These tests can be easily run with the command `python manage.py test HotelApp` in the terminal.
-
-#### - test_api_connection()
-Test if the API requests from both the City and the Hotel data returns status code 200
-#### - test_write_to_db()
-Test if the number of hotel model objects that will be written into the database equals the number of objects that is collected from that database.
-#### - test_filtering_model_objects()
-Test if the applied filter on the variable model_objects is actually not case sensitive.
+In this project, seven unit tests are added in `tests.py`. These tests can be easily run with the command `python manage.py test HotelApp` in the terminal.
