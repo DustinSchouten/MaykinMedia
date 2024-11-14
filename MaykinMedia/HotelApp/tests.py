@@ -130,7 +130,7 @@ class Tests(TestCase):
         p_tag_no_hotels_found_message = soup.find('p', class_='no_hotels_found_message')
         self.assertIsNone(p_tag_no_hotels_found_message)
 
-    def test_index_view_post_invalid_city(self):
+    def test_index_view_post_empty_string(self):
         """
         Test if the hotel data is correctly rendered in the html template. In this test, a POST request is performed
         with an empty string as the city filter in the request body. In case of an invalid form, the response HTML
